@@ -121,6 +121,8 @@ const SpoilerOutputComponent = (props: NodeViewContentProps) => {
           className={
             `${options.spoilerClass} ${open ? options.spoilerOpenClass : options.spoilerCloseClass}`
           }
+          tabIndex={0}
+          onKeyDown={(e) => e.key === "Enter" || e.key === " " ? setOpen(!open) : undefined}
           onClick={() => setOpen(!open)}
         />
     </NodeViewWrapper>
