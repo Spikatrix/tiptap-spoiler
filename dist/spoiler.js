@@ -95,7 +95,7 @@ const SpoilerOutputComponent = (props) => {
     const options = props.extension.options;
     return (react_1.default.createElement(react_2.NodeViewWrapper, { as: options.as },
         react_1.default.createElement(react_2.NodeViewContent, { as: options.as, className: "".concat(options.spoilerClass, " ").concat(open ? options.spoilerOpenClass : options.spoilerCloseClass), tabIndex: 0, onKeyDown: function (e) {
-                return e.key === "Enter" || e.key === " " ? setOpen(!open) : undefined;
+                return e.key === "Enter" ? setOpen(!open) : undefined;
             }, onClick: function () { return setOpen(!open); } })));
 };
 exports.SpoilerOutput = core_1.Node.create({
